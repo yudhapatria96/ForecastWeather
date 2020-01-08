@@ -28,13 +28,14 @@ public class IntroduceActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_forecast)
     public void cekData() {
-        if(edtName.getText() == null || edtZipCode.getText() == null){
+        if( edtName.getText().equals("") || edtZipCode.getText().equals("")){
             Toast.makeText(getApplicationContext(), "Please Fill All Field", Toast.LENGTH_LONG).show();
         }else{
             Intent intent = new Intent(this, MainActivity.class);
             intent.putExtra("fullname", edtName.getText().toString());
             intent.putExtra("zipcode", edtZipCode.getText().toString());
             startActivity(intent);
+            finish();
         }
     }
 }
