@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -34,6 +35,7 @@ import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -167,7 +169,13 @@ call.enqueue(new Callback<WeatherResponse>() {
             }
     }
 
-
+    @OnClick(R.id.tvabout)
+    public void onAbout(){
+        String url = "https://github.com/yudhapatria96";
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
+    }
     private void setToGlide(String img, ImageView imgView) {
         Glide.with(MainActivity.this)
                 .applyDefaultRequestOptions(new RequestOptions()
