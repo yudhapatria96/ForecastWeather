@@ -309,9 +309,8 @@
                     android:id="@+id/tvabout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="8sp"
-                    android:layout_marginBottom="8dp"
-                    android:text="github.com/yudhapatria96"/>
+                    android:textSize="14sp"
+                    android:text="Yudha Patria"/>
             </LinearLayout>
         </LinearLayout>
         </LinearLayout>
